@@ -1,0 +1,1093 @@
+/*
+Theme Name: TheBookReview
+Theme URI: http://wordpress.org/themes/TheBookReview
+Author: the WordPress team Author URI: http://wordpress.org/
+Description: The 2013 theme for WordPress takes us back to the blog, featuring a full range of post formats, each displayed beautifully in their own unique way. Design details abound, starting with a vibrant color scheme and matching header images, beautiful typography and icons, and a flexible layout that looks great on any device, big or small.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready Text Domain: TheBookshop This theme, like WordPress, is licensed under the GPL. Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@charset "utf-8";
+
+/* CSS Document */
+
+/*calender widget code*/
+
+.calendar_wrap{
+  color: white;
+}
+.calendar_wrap a{
+  color: yellow;
+}
+
+/*the code for content boxes*/
+.thisBox {
+  color            : grey;
+  float            : left;
+  padding: 30px;
+  width            : 50%;
+}
+
+.border{
+  border: 1px solid lightgrey;
+}
+
+.blink:active {
+  opacity: 0.5;
+}
+
+.blink{
+  transition: 0.1s ease-in;
+}
+
+.border-right{
+  border-right: 1px solid lightgrey;
+  height: 100%;
+}
+.border-left{
+  border-left: 1px solid lightgrey;
+  height: 100%;
+}
+
+.border-bottom{
+  border-bottom: 1px solid lightgrey;
+}
+
+.wp-post-image{
+  width: 100%;
+  height: 100%;
+}
+
+.margin{
+  margin:3%;
+}
+.margin-bottom{
+  margin-bottom: 5%;
+}
+
+/*clearfix*/
+.clearfix::after {
+  clear   : both;
+  content : "";
+  display : table;
+}
+/*give element min height*/
+.minHeight {
+  height: 500px;
+
+}
+
+.fullHeight{
+  height: 100%;
+}
+
+select.filter{
+  width: 100%;
+  padding: 15px;
+  -webkit-appearance: none;
+  color: grey;
+  font-family : 'Lato',
+  sans-serif;
+  font-size: 100%;
+}
+
+
+html, body {
+  box-sizing : border-box;
+  margin     : 0;
+}
+
+.logo h1 a:-webkit-any-link{
+  text-decoration: none !important;
+  color: #60DFE5;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav.dropdown label{
+  color: white;
+  text-align: center;
+  font-size: 120%;
+}
+
+a,
+p, label, option, select {
+  font-family : 'Lato',
+  sans-serif;
+  font-size: 1em;
+  color: #57575a;
+}
+
+h1,
+h2,{
+  color       :  #57575a;
+  font-family : 'Comfortaa',
+  cursive;
+  font-size: 2.5em;
+}
+
+h3 {
+  color       :  #57575a;
+  font-family : 'Comfortaa',
+  cursive;
+  font-size: 1.5em;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing : inherit;
+  padding:0;
+}
+
+body {
+  margin-left  : auto;
+  margin-right : auto;
+
+}
+
+img {
+  height : 100%;
+  width  : 100%;
+}
+
+button a{
+  color: white;
+  font-size: 1.8em;
+
+}
+
+.imgFullWidth {
+  height: auto;
+  width: 100%;
+  padding: 0;
+  margin:0;
+  overflow: hidden;
+  position: relative;
+}
+
+.noMargin {
+  float:inherit;
+  margin   : 0 !important;
+  overflow : hidden;
+  padding  : 0 !important;
+  position : relative;
+}
+
+header.headerImage div{
+  padding: 0 !important;
+}
+
+/*This will make any text with class glow to glow*/
+.glow, .glow:hover, .glow:focus
+{
+	text-decoration: none;
+	text-shadow: none;
+	transition: 0.5s ease-in;
+	outline: 0 none;
+}
+
+.glow:hover, .glow:focus
+{
+	text-shadow: -1px 1px 8px yellow, 1px -1px 8px white;
+}
+
+.boxGlow, .boxGlow:hover, .boxGlow:focus{
+  transition: 0.2s ease-in;
+}
+
+.boxGlow:hover, .boxGlow:focus
+{
+  box-shadow: -1px 1px 8px white, 1px -1px 8px white;
+}
+.boxGreyGlow, .boxGreyGlow:hover, .boxGreyGlow:focus{
+  transition: 0.2s ease-in;
+}
+
+.boxGreyGlow:hover, .boxGreyGlow:focus
+{
+  box-shadow: -1px 1px 8px lightgrey, 1px -1px 8px lightgrey;
+}
+
+/*this is for form7 control in contacts */
+.wpcf7-form-control {
+  width: 100%;
+  padding: 5px;
+  font-size: 1em;
+}
+
+.wpcf7 label{
+  font-size: 1em;
+}
+
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<THIS IS THE CODE FOR SEARCH BOX>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+/*<form role="search" method="get" id="searchform" class="searchform" action="http://localhost/wordpress/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form>*/
+
+label.screen-reader-text{
+  display: none;
+}
+
+/*this is the search box background*/
+.fullWidthBackground {
+  /* background-color: lightgrey; */
+  background-image  : url("http://ell.h-cdn.co/assets/16/21/1600x800/landscape-1464377153-elle-0612books-lead.jpg");
+  background-repeat : no-repeat;
+}
+
+div#searchBox, form#searchform.searchform {
+  background-color : skyblue;
+  margin           : 30px auto 30px auto;
+  margin-left      : auto;
+  margin-right     : auto;
+  opacity          : 0.9;
+}
+
+
+input#userSearch {
+  background-color : skyblue;
+  border           : 2px solid white;
+  color            : white;
+  font-family      : monospace;
+  font-size        : 150%;
+  padding          : 13px;
+  width            : 100%;
+}
+
+/*this is for serachboxinput widget*/
+input#s {
+  background-color : skyblue;
+  border           : 2px solid white;
+  color            : white;
+  font-family      : monospace;
+  font-size        : 150%;
+  padding          : 13px;
+  width            : 68%;
+  margin: 30px 3% 30px 5%;
+  display: inline-block;
+}
+
+input#s, input#s:hover, input#s:focus,
+input#searchsubmit, input#searchsubmit:hover, input#searchsubmit:focus
+{
+  transition: 0.2s ease-in;
+}
+
+input#s:hover, input#s:focus,
+input#searchsubmit:hover, input#searchsubmit:focus
+{
+  box-shadow: -1px 1px 8px white, 1px -1px 8px white;
+}
+
+#userSearch::-webkit-input-placeholder {
+  color : white;
+}
+
+button#userSubmit,
+html input#userSubmit[type="button"],
+input#userSubmit[type="reset"],
+input#userSubmit[type="submit"] {
+  border      : 2px solid white;
+  color       : white;
+  font-size   : 150%;
+  font-weight : bold;
+  min-width   : 50px;
+  padding     : 10px;
+  width       : 100%;
+}
+
+/*this is for serachboxinput button widget*/
+input#searchsubmit {
+  border      : 2px solid white;
+  color       : white;
+  font-size   : 150%;
+  font-weight : bold;
+  min-width   : 50px;
+  padding     : 10px;
+  width       : 20%;
+  display: inline-block;
+}
+
+#userSubmit, input#searchsubmit {
+  background-color : skyblue;
+}
+
+#userSubmit:active, input#searchsubmit:active {
+  border:1px solid lightgrey;
+  box-shadow: -1px 1px 8px white, 1px -1px 8px white;
+}
+
+input#userSearch:focus, input#s:focus,
+input#userSearch:hover, input#s:focus {
+  border : 3px solid white;
+}
+
+#userSearch::-webkit-input-placeholder, input#s::-webkit-input-placeholder {
+  color : white;
+  font-size : 90%;
+}
+
+
+.logo h1 {
+  clear       : both;
+  color       : #60DFE5;
+  float       : left;
+  font-family : 'Comfortaa',
+  cursive;
+}
+
+.container {
+  margin : 0 auto;
+  width  : 100%;
+}
+
+/* -- our cleafix hack -- */
+
+.row:after,
+.row:before {
+  clear   : both;
+  content : "";
+  display : table;
+}
+
+[class*='cat-item']{
+  list-style-type: none;
+  font-family : 'Lato',
+  sans-serif;
+  color: #57575a;
+}
+
+
+ul, li{
+  list-style-type: none;
+  font-family : 'Lato', sans-serif;
+  color: #57575a;
+}
+
+[class*='col-'] {
+  float      : left;
+  min-height : 1px;
+}
+
+/* -- setting border box on all elements inside the grid -- */
+
+.container * {
+  box-sizing : border-box;
+}
+
+[class*='col-'] {
+  float      : left;
+  min-height : 1px;
+  padding    : 15px;
+  /* -- our gutter -- */
+}
+
+.col-xs-1 {
+  width : 8.3%;
+}
+
+.col-xs-2 {
+  width : 16.66%;
+}
+
+.col-xs-3 {
+  width : 24.99%;
+}
+
+.col-xs-4 {
+  width : 33.33%;
+}
+
+.col-xs-5 {
+  width : 41.5%;
+}
+
+.col-xs-6 {
+  width : 49.99%;
+}
+
+.col-xs-7 {
+  width : 58.33%;
+}
+
+.col-xs-8 {
+  width : 66.6%;
+}
+
+.col-xs-9 {
+  width : 74.99%;
+}
+
+.col-xs-10 {
+  width : 83.33%;
+}
+
+.col-xs-11 {
+  width : 91.66%;
+}
+
+.col-xs-12 {
+  width : 100%;
+}
+
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<THIS IS THE CODE FOR NAVIGATION>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+
+nav {
+  font-family: helvetica;
+  z-index: 300;
+}
+
+.dropdown ul li {
+  background     : #60DFE5;
+  cursor         : pointer;
+  float          : left;
+  margin-top     : .25em;
+  padding        : 1em;
+  position       : absolute;
+  text-align     : center;
+  text-transform : uppercase;
+}
+
+.dropdown ul li a {
+  color           : white;
+  display         : block;
+  text-decoration : none;
+}
+
+/* hide checkbox */
+
+input[type=checkbox] {
+  left     : -9999px;
+  position : absolute;
+  top      : -9999px;
+}
+
+/* make label act like a link would behave */
+
+label {
+  cursor      : pointer;
+  user-select : none;
+}
+
+/* hide basic navigation */
+
+nav.dropdown ul {
+  opacity: 0;
+  height  : 100%;
+  list-style : none;
+  margin     : 0;
+  padding    : 0;
+}
+
+nav.dropdown ul li{
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+
+/* position label full width at top of screen and style */
+
+nav.dropdown label {
+  background-color : #60DFE5;
+  display          : block;
+  float            : left;
+  font-size        : 1.1em;
+  margin           : 0;
+  min-height       : 2.25em;
+  padding          : .45em;
+  position         : relative;
+  width            : 100%;
+}
+
+/* put hamburger icon on top of label */
+
+nav.dropdown label:after {
+  content   : "\2261";
+  font-size : 1.8em;
+  position  : absolute;
+  right     : .25em;
+  top       : 0;
+}
+
+/* replace \2261 with \03a7 when it's checked */
+
+nav.dropdown input[type=checkbox]:checked ~ label:after {
+  content     : "x";
+  font-family : arial;
+  font-size   : 1.5em;
+  position    : absolute;
+  right       : .25em;
+  top         : 0.1em;
+}
+
+/* when label/checkbox is checked */
+
+/* display list navigation */
+
+nav.dropdown input[type=checkbox]:checked ~ ul {
+  /*display : block;*/
+  opacity: 1;
+}
+
+/* display list navigation full width */
+
+nav.dropdown input[type=checkbox]:checked ~ ul > li {
+  text-align : left;
+  width      : 100%;
+  position: relative;
+  opacity: 1;
+}
+
+/*styling footer*/
+footer.container {
+  background-color: 	#808080;
+
+  clear: both;
+  color: white;
+  padding:20px;
+}
+footer p{
+  color:white;
+}
+
+/*styling categories list in the article*/
+ul.categories li {
+   list-style-type: none;
+   font-family : 'Lato',
+   sans-serif;
+   color: #57575a;
+}
+
+ul.categories {
+  margin: 0;
+}
+
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<THIS IS THE CODE FOR INFOBOX IN THE HEADER>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+/*hide info box in xs screen*/
+.infoBox {
+  display: none;
+}
+
+
+/*this is code for small images on the header*/
+.HeaderImageContents{
+  position: relative;
+  overflow: hidden;
+}
+/*give animation to the image*/
+.HeaderImageContents img{
+  transition: all 0.5s ease-in;
+}
+/*styling and animation for the info box inside the headerImageContents*/
+.HeaderImageContents .infoBox {
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  padding: 10%;
+  background-color: rgba(55, 55, 55, 0.3);
+  transition: all 0.5s ease-in;
+  position: absolute;
+}
+/*styling for heading in the info box*/
+.HeaderImageContents .infoBox h4{
+  color: white;
+  font-size: 100%;
+  font-weight: bold;
+  font-family : 'Comfortaa',
+  cursive;
+  transition: all 0.5s ease-in;
+}
+/*styling for paragraphy in the info box*/
+.HeaderImageContents .infoBox p{
+  color: white;
+  font-size: 100%;
+  font-family : 'Lato',
+  sans-serif;
+  transition: all 0.5s ease-in;
+}
+
+/*styling for info button in the info box*/
+  .infoButton, .infoButton a{
+    color: white;
+    font-family : 'Lato',
+    sans-serif;
+    background-color: skyblue;
+    border:none;
+    padding: 10px;
+    position: relative;
+    transition: all 0.2s ease-in;
+  }
+
+  .infoButton:active {
+    border: 1px solid lightyellow;
+    color: grey;
+  }
+/*styling for review button in the review box*/
+  .reviewButton, .reviewButton a{
+    color: white;
+    font-family : 'Lato',
+    sans-serif;
+    background-color: pink;
+    border:none;
+    padding: 10px;
+    position: relative;
+    transition: all 0.2s ease-in;
+  }
+
+  .reviewButton:active {
+    border: 1px solid lightyellow;
+    color: grey;
+  }
+
+
+/*styling for cart button */
+  .cartButton{
+    color: white;
+    font-family : 'Lato',
+    sans-serif;
+    background-color: #DF4364;
+    border:none;
+    padding: 10px;
+    position: relative;
+    transition: all 0.2s ease-in;
+  }
+
+  .cartButton:active {
+    border: 1px solid lightyellow;
+    color: grey;
+  }
+
+  .price {
+    color:#DF4364;
+  }
+
+  /*<<<<<<<<<<<<<<<<<<<<<<THIS IS THE CODE FOR CONTACT FORM>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+.form-group {
+  padding: 10px;
+}
+
+.control-label{
+  width: 100%;
+}
+
+.form-control{
+  margin-top: 5px;
+  width: 100%;
+  padding: 5px;
+  font-size: 100%;
+}
+
+input:focus, textarea:focus {
+    background-color: lightyellow;
+}
+
+@media  screen and (max-width: 540px){
+  .fullWidth-xs{
+    width: 100%;
+    float: left;
+  }
+
+  input#searchsubmit{
+    font-size: 80%;
+    padding: 15px;
+  }
+
+}
+
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<break point 540>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<break point 540>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<break point 540>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media screen
+and (min-width : 540px) {
+
+/*fix padding for search form*/
+  #searchForm {
+    padding-left: 5%;
+    padding-right: 5%;
+    z-index: -1;
+  }
+
+  /*this is for serachbox widget*/
+  form#searchform.searchform{
+    width: 90%;
+  }
+
+/*fix width on 540 px*/
+  header, article.container, footer.container {
+    clear: both;
+    margin-left  : auto;
+    margin-right : auto;
+    width: 80%;
+  }
+
+
+
+
+
+/*put logo area on the left hand side in 540px*/
+  .logo{
+    background-color: white;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top:0 ;
+    width: 10%;
+  }
+
+/*style and transform the logo to rotate 90 degree upward*/
+  .logo h1 {
+    color       : #60DFE5;
+    font-family : 'Comfortaa',
+    cursive;
+    font-size: 150%;
+    left:8%;
+    padding     : 10px;
+    position: fixed;
+    top:100px;
+    transform: rotate(-90deg) translate(0,-100%);
+    width: 10%;
+  }
+
+  .border-sm{
+    border: 1px solid lightgrey;
+  }
+
+  .border-right-sm{
+    border-right: 1px solid lightgrey;
+    height: 100%;
+  }
+  .border-left-sm{
+    border-left: 1px solid lightgrey;
+    height: 100%;
+  }
+
+/*hidden box that will cover the content when menu button clicked*/
+  nav.dropdown .menuBox {
+    height: 100%;
+    left: 10%;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    transition: opacity 1s;
+    width: 80%;
+    z-index: -2;
+  }
+
+/*left hand side grey area in the hidden box which is actually inside the right hand side box*/
+  nav.dropdown .menuBox .leftBox{
+    background-color: grey;
+    height: 100%;
+    position: relative;
+    width: 50%;
+    transition: transform 1s;
+  }
+
+/*right hand side white area in the hidden box*/
+  nav.dropdown .menuBox .rightBox{
+    background-color: white;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transition: transform 1s;
+  }
+
+/*hide the box to far right of the screen*/
+  nav.dropdown .menuBox .rightBox{
+    transform: translateX(1000px);
+  }
+
+  nav.dropdown li {
+    background-color : white;
+    position: relative;
+    opacity: 0;
+  }
+
+  nav.dropdown ul {
+    height :100%;
+    opacity: 0;
+    position: fixed;
+    right: 10%;
+    top: 10%;
+    transform: translateX(1000px);
+    transition: all 1s;
+    width: 25%;
+  }
+
+  nav.dropdown label {
+    background-color : #60DFE5;
+    display          : block;
+    font-size        : 1.1em;
+    margin           : 0;
+    min-height       : 2.25em;
+    padding          : .45em;
+    position         : fixed;
+    right: 0;
+    top:  45%;
+    width            : 10%;
+  }
+
+
+  /* display list navigation */
+
+  nav.dropdown input[type=checkbox]:checked ~ ul {
+    opacity: 1;
+    z-index: 499;
+    transform: translateX(0);
+  }
+  /* display list navigation full width */
+
+  nav.dropdown input[type=checkbox]:checked ~ ul li {
+    font-size: 100%;
+    padding: 5px;
+    font-weight: bold;
+    opacity: 1;
+    right:10%;
+    z-index: 500;
+  }
+
+  nav.dropdown input[type=checkbox]:checked ~ div {
+    opacity: 1;
+    z-index: 300;
+  }
+
+  nav.dropdown input[type=checkbox]:checked ~ div .rightBox{
+    transform: translateX(0);
+  }
+
+  nav.dropdown ul li a{
+    background-color: yellow;
+    color: #20165C;
+    width: 1px;
+  }
+
+  nav.dropdown ul li a:hover {
+    transition: width 1s;
+    width: 100%;
+  }
+
+  .col-sm-1 {
+    width : 8.3%;
+  }
+
+  .col-sm-2 {
+    width : 16.66%;
+  }
+
+  .col-sm-3 {
+    width : 24.99%;
+  }
+
+  .col-sm-4 {
+    width : 33.33%;
+  }
+
+  .col-sm-5 {
+    width : 41.5%;
+  }
+
+  .col-sm-6 {
+    width : 49.99%;
+  }
+
+  .col-sm-7 {
+    width : 58.33%;
+  }
+
+  .col-sm-8 {
+    width : 66.6%;
+  }
+
+  .col-sm-9 {
+    width : 74.99%;
+  }
+
+  .col-sm-10 {
+    width : 83.33%;
+  }
+
+  .col-sm-11 {
+    width : 91.66%;
+  }
+
+  .col-sm-12 {
+    width : 100%;
+  }
+
+
+/*this is the end of break media query 540px */
+}
+
+
+/*to hide element on small screen*/
+@media (max-width: 898px) {
+  .hidden-xs-sm {
+    display : none;
+  }
+
+}
+
+
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<break point 898>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<break point 898>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<break point 898>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+@media screen
+and (min-width : 898px) {
+
+  .hidden-md{
+    display: none;
+  }
+
+  .logo{
+    background-color: white;
+    clear: both;
+    content:"";
+    height: 100%;
+    left:0;
+    position: absolute;
+    top:0 ;
+    width: 5%;
+  }
+
+  .logo h1{
+    left:2%;
+  }
+
+  .border-md{
+    border: 1px solid lightgrey;
+  }
+
+  .border-right-md{
+    border-right: 1px solid lightgrey;
+    height: 100%;
+  }
+  .border-left-md{
+    border-left: 1px solid lightgrey;
+    height: 100%;
+  }
+
+  .border-bottom-md{
+    border-bottom: 1px solid lightgrey;
+  }
+
+
+
+  .HeaderImageContents .infoBox Button:hover{
+    box-shadow: 0 0 15px #fff;
+  }
+
+/*show info box when hover*/
+  .HeaderImageContents:hover div.infoBox{
+    opacity: 1;
+    display: block;
+    z-index: 200;
+  }
+
+/*zoom in the image when hover*/
+  .HeaderImageContents:hover img{
+    transform: scale(1.2);
+  }
+
+
+  #userSearch::-webkit-input-placeholder  {
+    content: "Search across the catalogue";
+  }
+
+  header, article.container, footer.container {
+    clear: both;
+    margin-left  : auto;
+    margin-right : auto;
+    width: 90%;
+  }
+
+  nav.dropdown .menuBox{
+    left:5%;
+    width: 90%;
+  }
+
+  nav.dropdown label{
+    width: 5%;
+
+  }
+
+  nav.dropdown ul{
+    right:5%;
+  }
+
+  nav.dropdown input[type=checkbox]:checked ~ ul li{
+    padding: 15px;
+    font-size: 1.5em;
+  }
+
+  nav.horizontal  ul > li {
+    margin : .25em 1em;
+    width  : auto;
+  }
+
+
+  .col-md-1 {
+    width : 8.3%;
+  }
+
+  .col-md-2 {
+    width : 16.66%;
+  }
+
+  .col-md-3 {
+    width : 24.99%;
+  }
+
+  .col-md-4 {
+    width : 33.33%;
+  }
+
+  .col-md-5 {
+    width : 41.5%;
+  }
+
+  .col-md-6 {
+    width : 49.99%;
+  }
+
+  .col-md-7 {
+    width : 58.33%;
+  }
+
+  .col-md-8 {
+    width : 66.6%;
+  }
+
+  .col-md-9 {
+    width : 74.99%;
+  }
+
+  .col-md-10 {
+    width : 83.33%;
+  }
+
+  .col-md-11 {
+    width : 91.66%;
+  }
+
+  .col-md-12 {
+    width : 100%;
+  }
+
+
+}
+/*this is the end of break media query */
